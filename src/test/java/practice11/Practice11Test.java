@@ -77,7 +77,7 @@
 //        Student tom = new Student(1, "Tom", 21, klass2);
 //        assertThat(tom.getName()).isEqualTo("Tom");
 //        assertThat(tom.getAge()).isEqualTo(21);
-//        assertThat(tom.getKlass()).isEqualTo(klass2);
+//        assertThat(tom.getNumber()).isEqualTo(klass2);
 //    }
 //
 //    @Test
