@@ -4,8 +4,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Observable;
 import java.util.Observer;
-import java.util.stream.Collectors;
-import org.apache.commons.lang3.StringUtils;
 
 public class Teacher extends Person implements Observer {
     private List<Klass> classes;
@@ -37,8 +35,7 @@ public class Teacher extends Person implements Observer {
     }
 
     private String getClassSum() {
-        List<Integer> classNumbers = classes.stream().map(Klass::getNumber).collect(Collectors.toList());
-        return StringUtils.join(classNumbers, ", ");
+        return classes.stream().map(c -> c.getNumber().toString()).reduce( (c1, c2) -> c1 + ", " + c2).get();
     }
 
     String introduceWith(Student student) {
