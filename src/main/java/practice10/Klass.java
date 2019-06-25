@@ -30,6 +30,7 @@ public class Klass {
     void assignLeader(Student student) {
         if (members.contains(student)) {
             this.leader = student;
+            return;
         }
 
         System.out.println("It is not one of us.");
